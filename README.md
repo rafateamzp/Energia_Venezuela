@@ -2,6 +2,8 @@
 
 Este repositorio resguarda datos geográficos relacionados con el sistema eléctrico de Venezuela. Su objetivo actual es conservar y poner a disposición los archivos recibidos en sus formatos originales, sin transformaciones ni análisis adicionales.
 
+![Mapa día 12 - Power](power.png)
+
 ## Fuentes y archivos
 
 - [`power_lines_VEN.geojson`](power_lines_VEN.geojson): datos extraídos de [Overpass Turbo](https://overpass-turbo.eu/).
