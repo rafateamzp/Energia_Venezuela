@@ -1,49 +1,16 @@
-# Sistema eléctrico de Venezuela
+# Datos geográficos del sistema eléctrico de Venezuela
 
-Repositorio de datos geográficos abiertos sobre la infraestructura del sistema eléctrico de Venezuela. Incluye una capa de líneas en formato GeoJSON y la misma clase de datos en un conjunto de archivos Shapefile.
+Este repositorio resguarda los archivos originales disponibles sobre el sistema eléctrico de Venezuela. Por ahora, su objetivo es conservar y organizar los datos tal como fueron recibidos, sin transformaciones ni análisis adicionales.
 
-## Contenido
+## Archivos
 
-- [`power_lines_VEN.geojson`](power_lines_VEN.geojson): capa GeoJSON de líneas eléctricas.
-- [`240904_Energia_electrica_venezuela_WGS84/`](240904_Energia_electrica_venezuela_WGS84/): capa Shapefile, compuesta por los archivos `.shp`, `.shx`, `.dbf`, `.prj` y archivos auxiliares.
+- [`power_lines_VEN.geojson`](power_lines_VEN.geojson): archivo de datos en formato GeoJSON.
+- [`240904_Energia_electrica_venezuela_WGS84/`](240904_Energia_electrica_venezuela_WGS84/): archivos originales de la capa Shapefile y sus componentes asociados.
 
-El sistema de referencia indicado para la capa Shapefile es **WGS 84 (EPSG:4326)**, con coordenadas geográficas en grados.
+El archivo de proyección incluido con el Shapefile indica el sistema de coordenadas geográficas WGS 84. Se recomienda conservar juntos todos los archivos de la capa Shapefile.
 
-## Uso
+## Conservación y uso
 
-### QGIS
+Los archivos se mantienen en sus formatos originales para facilitar su consulta y uso en herramientas compatibles con datos geográficos, como QGIS y bibliotecas de análisis geoespacial.
 
-1. Descarga o clona este repositorio.
-2. Para el GeoJSON, abre `power_lines_VEN.geojson` en QGIS.
-3. Para el Shapefile, abre `240904_Energia_electrica_venezuela_WGS84/240904_Energia_electrica_venezuela_WGS84.shp`. Mantén juntos los archivos que comparten el mismo nombre base para que la capa se lea correctamente.
-
-### Python
-
-Puedes leer el GeoJSON con GeoPandas:
-
-```python
-import geopandas as gpd
-
-lineas = gpd.read_file("power_lines_VEN.geojson")
-print(lineas.head())
-print(lineas.crs)
-```
-
-Para usar el Shapefile, sustituye la ruta por:
-
-```python
-lineas = gpd.read_file(
-    "240904_Energia_electrica_venezuela_WGS84/"
-    "240904_Energia_electrica_venezuela_WGS84.shp"
-)
-```
-
-## Notas
-
-- El GeoJSON puede abrirse directamente en herramientas que admiten ese formato.
-- Los archivos Shapefile son un conjunto: no elimines ni separes sus componentes.
-- Este repositorio no especifica actualmente una licencia ni documenta la fuente original, la fecha de actualización de los datos o la definición de los atributos. Verifica esos detalles antes de reutilizar o redistribuir los datos.
-
-## Contribuciones
-
-Las mejoras en la documentación y las correcciones de los datos son bienvenidas mediante issues o pull requests.
+Este repositorio no documenta todavía la fuente, la fecha de obtención, el historial de cambios ni los términos de uso de los datos. La intención de reunir datos de interés público no implica por sí sola que exista una licencia abierta: verifica la procedencia y los permisos aplicables antes de redistribuirlos o utilizarlos en otros proyectos.
